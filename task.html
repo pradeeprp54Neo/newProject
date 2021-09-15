@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+          $(document).ready(function(){
+              $("#btn").click(function(){
+                  $("p").toggle(3000);
+                  $("p").fadeToggle(2000);
+                 $("img").animate({
+                     width:"300px",
+                     height:"300px",
+                     margin:"100px"
+
+                  })
+                  var pdata=$("p").text();
+                  alert(pdata)
+                  $("p").html("<i> hii hello</i>")
+                  $("#abc").click(function(){
+                      var pid=$(this).attr('pid');
+                      alert(pid);
+                  })
+
+              })
+          });
+        </script>
+    </head>
+    <body>
+        <p> Welcome</p>
+        <a href="#" pid="1" id="abc" >click here</a>
+        <img src="./images/i2.jpg" width="200px">
+        <button type="button" id="btn">click here</button>
+    </body>
+</html>
